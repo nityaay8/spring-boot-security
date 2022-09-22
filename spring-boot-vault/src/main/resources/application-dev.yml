@@ -1,0 +1,30 @@
+#spring.application.name: gs-vault-config
+#spring.cloud.vault.token: 00000000-0000-0000-0000-000000000000
+#spring.cloud.vault.scheme: http
+#spring.cloud.vault.kv.enabled: true
+#spring.config.import:  vault://
+
+spring:
+  application:
+    name: gs-vault-config
+
+spring.cloud.vault:
+  authentication: TOKEN
+  token: 00000000-0000-0000-0000-000000000000
+  host: localhost
+  port: 8200
+  scheme: http
+  uri: http://localhost:8200
+  connection-timeout: 5000
+  read-timeout: 15000
+  kv:
+    enabled: true
+
+spring.config.import: vault://
+
+server:
+  port: 8090
+
+logging:
+  level:
+    root: info

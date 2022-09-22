@@ -1,0 +1,42 @@
+#spring.application.name: gs-vault-config
+#spring.cloud.vault.token: 00000000-0000-0000-0000-000000000000
+#spring.cloud.vault.scheme: http
+#spring.cloud.vault.kv.enabled: true
+#spring.config.import:  vault://
+
+#spring.profiles.active: dev
+#spring.profiles.active: hashicorp
+
+
+#spring.application.name: gs-vault-config
+#spring.cloud.vault.token: 00000000-0000-0000-0000-000000000000
+#spring.cloud.vault.scheme: http
+#spring.cloud.vault.kv.enabled: true
+#spring.config.import:  vault://
+
+spring:
+  application:
+    name: gs-vault-config
+
+spring.cloud.vault:
+  authentication: TOKEN
+#  token: hvs.CAESIJ6k7Qzt5KEtXi2nNxWq8kmul8Zck-tZ2L4B31nzhAi8GicKImh2cy45WU9XOER1N09PRXF3aVJhQjllWFJxWmMuQjEzdkkQtBY
+  token: hvs.CAESIGw0-k9h0mSXjK3LBVEdkDCSbyu2gRP-XuCjVqd7CjvEGicKImh2cy5MT2ttYlhmTUJubkh4T3J0djhXc2JEdHEuQjEzdkkQ3Fw
+  host: sample-cluster-public-vault-77d8ddad.c18222e5.z1.hashicorp.cloud
+  port: 8200
+  scheme: https
+  uri: https://sample-cluster-public-vault-77d8ddad.c18222e5.z1.hashicorp.cloud:8200
+  connection-timeout: 5000
+  read-timeout: 15000
+  namespace: admin
+  kv:
+    enabled: true
+
+spring.config.import: vault://
+
+server:
+  port: 8090
+
+logging:
+  level:
+    root: info
