@@ -13,3 +13,8 @@ https://docs.spring.io/spring-cloud-vault/docs/current/reference/html/
 https://learn.hashicorp.com/tutorials/vault/eaas-spring-demo?in=vault/app-integration
 
 ### assign the permission
+https://sample-cluster-public-vault-77d8ddad.c18222e5.z1.hashicorp.cloud:8200/ui/vault/policy/acl/templated_secret_read_only?namespace=admin
+
+
+### db properties
+https://www.javainuse.com/spring/cloud-vault

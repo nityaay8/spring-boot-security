@@ -18,6 +18,15 @@ spring:
   application:
     name: gs-vault-config
 
+spring.jpa:
+  hibernate.ddl-auto: update
+  show-sql: true
+spring.datasource:
+  url: ${db.url}
+  username: ${db.user}
+  password: ${db.pwd}
+
+
 spring.cloud.vault:
 #  authentication: TOKEN
 #  token: hvs.CAESIGw0-k9h0mSXjK3LBVEdkDCSbyu2gRP-XuCjVqd7CjvEGicKImh2cy5MT2ttYlhmTUJubkh4T3J0djhXc2JEdHEuQjEzdkkQ3Fw
