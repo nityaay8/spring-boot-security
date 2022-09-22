@@ -19,9 +19,14 @@ spring:
     name: gs-vault-config
 
 spring.cloud.vault:
-  authentication: TOKEN
-#  token: hvs.CAESIJ6k7Qzt5KEtXi2nNxWq8kmul8Zck-tZ2L4B31nzhAi8GicKImh2cy45WU9XOER1N09PRXF3aVJhQjllWFJxWmMuQjEzdkkQtBY
-  token: hvs.CAESIGw0-k9h0mSXjK3LBVEdkDCSbyu2gRP-XuCjVqd7CjvEGicKImh2cy5MT2ttYlhmTUJubkh4T3J0djhXc2JEdHEuQjEzdkkQ3Fw
+#  authentication: TOKEN
+#  token: hvs.CAESIGw0-k9h0mSXjK3LBVEdkDCSbyu2gRP-XuCjVqd7CjvEGicKImh2cy5MT2ttYlhmTUJubkh4T3J0djhXc2JEdHEuQjEzdkkQ3Fw
+
+  authentication: APPROLE
+  app-role:
+    role-id: 0de5cc12-bb81-6f38-8648-de1ef4758e06
+    secret-id: 35cca217-151e-00ce-dc42-794828c0c972
+    app-role-path: approle
   host: sample-cluster-public-vault-77d8ddad.c18222e5.z1.hashicorp.cloud
   port: 8200
   scheme: https
