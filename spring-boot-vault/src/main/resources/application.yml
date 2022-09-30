@@ -43,7 +43,9 @@ spring.cloud.vault:
   connection-timeout: 5000
   read-timeout: 15000
   namespace: admin
+
   kv:
+    backend: secret
     enabled: true
 
 spring.config.import: vault://
